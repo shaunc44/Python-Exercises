@@ -3,26 +3,15 @@
 
 def textSearch (text, words):
 	count = 0
-	#text = text.lower()
+	text = text.lower()
 	for i in words:
 		if i in text:
 			count += 1
 
-	return count
+	return str(count)
 	#return 0
 
-text = raw_input('Hello, please enter text to be analyzed: \n')
-words = raw_input('Which words would you like to count? \n')
+text = raw_input('Hi, please enter some text to be analyzed:\n\n\t')
+words = raw_input('\nWhich words would you like to count?\n\n\t')
 
-textSearch (text, words)
-
-
-
-
-#print text
-
-'''
-print ('Thank you!\n')
-print ('Now, please enter the words you would like to count: \n')
-words = input()
-'''
+print ('\nWord Count = ' + (textSearch (text, words)))
