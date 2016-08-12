@@ -1,12 +1,25 @@
 # Program that counts words in user-entered text
-# Mininum length is 3 characters
+# Mininum length is 3 characters ****(maybe)
 
-def count_words (text, words):
-	return 0
+def textSearch (text, words):
+	count = 0
+	#text = text.lower()
+	for i in words:
+		if i in text:
+			count += 1
 
-text = raw_input('Hello, please enter some text to be analyzed: \n')
+	return count
+	#return 0
 
-print text
+text = raw_input('Hello, please enter text to be analyzed: \n')
+words = raw_input('Which words would you like to count? \n')
+
+textSearch (text, words)
+
+
+
+
+#print text
 
 '''
 print ('Thank you!\n')
