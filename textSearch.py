@@ -1,24 +1,17 @@
 # Program that counts a word from a user-entered text
-# Mininum length is 3 characters ****(maybe)
 
-def textSearch (text, words):
-
+# Function to lowercase text and
+# Separate words by space and then count the word
+def textSearch (text, word):
+	word = word.lower()
 	text = text.lower()
-	words = words.lower()
-
 	text_joined = ''.join(c 
 		if c.isalnum() 
 		else ' ' for c in text).split()
-
-	count = 0
-	for i in words:
-		if i in text_joined:
-			count += 1
-
+	count = text_joined.count(word)
 	return str(count)
-	#return 0
 
+# User input & interaction
 text = raw_input('Please enter some text to be analyzed:\n\n\t')
-words = raw_input('\nWhich word would you like to count?\n\n\t')
-
-print ('\nWord Count = ' + (textSearch (text, words)))
+word = raw_input('\nWhich word would you like to count?\n\n\t')
+print ('\nWord Count = ' + (textSearch (text, word)))
