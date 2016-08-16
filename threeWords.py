@@ -3,7 +3,16 @@
 
 def threeWords (sentence):
 	sent = sentence.lower()
-	if 
+	sentSplit = sent.split()
+		for i in sentSplit:
+			if sentSplit.isalpha():
+				count += 1
+		return True
+
+	else:
+
+
+	return False
 
 
 
