@@ -3,22 +3,29 @@
 # only letters.
 
 # Introduction of what this program does to the user
-print ('This program will print True if your sentence has')
-print ('three words, or more, and False if it does not.\n')
+print('This program will print True if your sentence has')
+print('three words, or more, and False if it does not.\n')
+
+# Run anonymous function to verify if three words
+# occur in succession
+three_words = lambda sentence: "wordwordword" in "".join(
+	'word' if word.isalpha()
+	else 'not_word' for word in sentence.split())
 
 # Request sentence for user-input
-sent = raw_input ('Enter a sentence: ')
+sentence = raw_input('Enter a sentence: ')
 
-# Split sentence and separate letter-only words
-sent_joined = "".join ('word' if word.isalpha()
-	else 'digit' for word in sent.split())
+print(three_words(sentence))
 
-# Run anonymous function to verify if three words occur
-# in succession
-three_words = lambda sent_joined: 'wordwordword' in sent_joined
 
-# Print bool result of threeWords function
-print ('\n' + str(three_words))
+
+
+
+
+
+
+
+
 
 
 
