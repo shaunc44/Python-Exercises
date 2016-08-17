@@ -1,8 +1,29 @@
-# This program verifies if three words, with letters
-# only, exist in the user-entered text
+# This program verifies that three words occur consecutively
+# in the user-entered text.  Each word must consist of
+# only letters.
 
-# This function splits the string input by each space 
-# and then counts the words that contain letters only
+# Introduction of what this program does to the user
+print ('This program will print True if your sentence has')
+print ('three words, or more, and False if it does not.\n')
+
+# Request sentence for user-input
+sent = raw_input ('Enter a sentence: ')
+
+# Split sentence and separate letter-only words
+sent_joined = "".join ('word' if word.isalpha()
+	else 'digit' for word in sent.split())
+
+# Run anonymous function to verify if three words occur
+# in succession
+three_words = lambda sent_joined: 'wordwordword' in sent_joined
+
+# Print bool result of threeWords function
+print ('\n' + str(three_words))
+
+
+
+# Old program that didn't factor in 3 consecutive words
+"""
 def threeWords (sentence):
 	sentSplit = sentence.split()
 	count = 0
@@ -22,3 +43,4 @@ sentence = raw_input('Enter a sentence: ')
 
 # Print bool result of threeWords function
 print('\n' + threeWords(sentence))
+"""
