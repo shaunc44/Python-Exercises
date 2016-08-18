@@ -17,9 +17,13 @@ print ('element to the Nth power based on index position\n')
 print ('Example: ([1, 4, 8, 7], 2) = 64\n\n')
 
 num_array = list()
-num = raw_input ('Enter how many elements you want: ')
-print ('Enter each number in the array: ')
-for i in range(int(num)):
+elements = raw_input ('Enter how many elements you want: ')
+print ('\nEnter each number in the array: ')
+
+for i in range(int(elements)):
 	n = raw_input('num: ')
 	num_array.append(int(n))
 print 'Array:', num_array
+
+print ('\nEnter the index position of the element')
+print raw_input('you would like to exponentiate? ')
