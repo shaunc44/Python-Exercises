@@ -2,13 +2,13 @@
 # in an array and returns -1 if N is outside the array
 # Example - indexWithPower([1, 3, 5, 6], 2) = 25
 
-def indexPower (array, n):
-	if (n > len(array)-1):
+def indexPower (num_array, position):
+	if (position > len(num_array)-1):
 		return -1
 	else:
-		return array[n]**n
+		return num_array[position]**position
 
-	indexArray[array, n]
+	#indexArray[array, position]
 
 	#return None
 
@@ -26,4 +26,11 @@ for i in range(int(elements)):
 print 'Array:', num_array
 
 print ('\nEnter the index position of the element')
-print raw_input('you would like to exponentiate? ')
+position = raw_input('you would like to exponentiate? ')
+
+print len(num_array)
+
+
+
+# Call the function indexPower
+print (indexPower (num_array, position))
