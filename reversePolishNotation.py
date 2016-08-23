@@ -1,19 +1,14 @@
 def rpn(equation):
-	eq_parts = equation.split()
+	eq_list = equation.split()
 
-	if len(eq_parts) >= 3:
-		block = ""
-		for x in eq_parts:
-			count = 0
-			if x.isnumeric() == True:
-				block.append(x)
-			else:
-				block.insert(1, x)
-
-			result = eval(block)
-	else:
-		print eval(new_eq)
-
+	while len(eq_list) >= 3:
+		if len(eq_list) <= 3:
+			return eval(eq_list)
+		else:
+			list.insert(1, list[2])
+			result = eval(list[0:3])
+			list.remove(list[0:3])
+			list.insert(0, result)
 
 
 equation = "3 4 +"
