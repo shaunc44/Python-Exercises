@@ -1,26 +1,22 @@
+
 def rpn(equation):
 	eq_list = equation.split()
-
-	while len(eq_list) >= 3:
-		if len(eq_list) <= 3:
-			return eval(eq_list)
+	# this for loop need to change???
+	for i in range(len(eq_list)):
+		if len(eq_list) < 3:
+			return eval(equation)
 		else:
-			list.insert(1, list[2])
-			result = eval(list[0:3])
-			list.remove(list[0:3])
-			list.insert(0, result)
+			while len(eq_list) > 3:
+			#for i in range(len(eq_list)):
+				eq_list.insert(1, eq_list[2])
+				eq_join = " ".join(eq_list[0:3])
+				result = eval(eq_join)
+				for i in range(3):
+					eq_list.remove(eq_list[0])
+				eq_list.insert(0, result)
+				return result
 
 
-equation = "3 4 +"
-#print (rpn(equation))
-print rpn(equation)
-#eq_parts = equation.split()
-#print len(eq_parts)
+equation = "3 4 + 2 *"
 
-
-# 1. parse the string
-# 2. arrange first part by .ifnum etc and then calculate first expression
-# 3. arrange second part
-
-# How to separte operators?  What data type is an operator in python?
-
+print (rpn(equation))
