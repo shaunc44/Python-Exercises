@@ -1,22 +1,26 @@
-
 def rpn(equation):
-	eq_list = equation.split()
-	# this for loop need to change???
-	for i in range(len(eq_list)):
-		if len(eq_list) < 3:
-			return eval(equation)
-		else:
-			while len(eq_list) > 3:
-			#for i in range(len(eq_list)):
-				eq_list.insert(1, eq_list[2])
-				eq_join = " ".join(eq_list[0:3])
-				result = eval(eq_join)
-				for i in range(3):
-					eq_list.remove(eq_list[0])
-				eq_list.insert(0, result)
-				return result
+# Evaluate a reverse polish notation
 
+    stack = []
 
-equation = "3 4 + 2 *"
+    for val in equation.split(' '):
+        if val in ['-', '+', '*', '/']:
+            op1 = stack.pop()
+            op2 = stack.pop()
+            if val == '-':
+                result = op2 - op1
+            if val == '+':
+                result = op2 + op1
+            if val == '*':
+                result = op2 * op1
+            if val == '/':
+                result = op2 / op1
+            stack.append(result)
+        else:
+            stack.append(float(val))
 
-print (rpn(equation))
+    return stack.pop()
+
+equation = "3 4 * 8 - 3 / 9 *"
+
+print rpn(equation)
