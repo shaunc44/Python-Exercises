@@ -2,22 +2,19 @@ def string_compare (string1, string2):
 
 	stack = []
 
-	list1 = list(string1)
-	list2 = list(string2)
-
-	for letter1 in list1:
-		for letter2 in list2:
+	for letter1 in string1:
+		for letter2 in string2:
 			if letter1 == letter2:
 				stack.append(letter1)
-				return stack
-				break
+				continue
+				#return stack
+				#break
 		#else:
 		#	print ('No letters match')
-
 		#return stack
-		#print (letter1)
+		print stack
 
 
 string1 = 'cox'
-string2 = 'hopex'
+string2 = 'marox'
 print (string_compare(string1, string2))
