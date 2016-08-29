@@ -12,6 +12,8 @@ def string_compare (string1, string2):
 	#Remove duplicate letters
 	#stack = list(set(stack))
 	print (stack)
+	#Print gives the value to the user, whereas
+	#Return gives data to the program where the function is called
 
 
 #Enter string inputs and call function
