@@ -1,14 +1,13 @@
 def fibonacci(num):
 
-	num_list = [0, 1]
+	a, b = 0, 1
+	print a
+	print b
 
-	i = 0
-	print num_list[0]
-	print num_list[1]
-	while i < num:
-		total = num_list[-1] + num_list[-2]
-		print total
-		num_list.append(total)
-		i += 1
+	for i in range (1, num + 1):
+		c = a + b
+		print c
+		a = b
+		b = c
 
-print(fibonacci(15))
+fibonacci(10)

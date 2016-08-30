@@ -7,7 +7,6 @@ def sieve_prime(number):
 			if i % z == 0:
 				break
 		else:
-			#return i
 			sieve_list.append(i)
 
 	return sieve_list
