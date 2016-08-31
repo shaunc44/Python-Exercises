@@ -9,5 +9,6 @@ def fibonacci(num):
 		print c
 		a = b
 		b = c
+	#return c
 
 fibonacci(10)
