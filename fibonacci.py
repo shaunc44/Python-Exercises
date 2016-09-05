@@ -8,11 +8,11 @@ def fibonacci(num):
 	if b < num:
 		print b
 
-	for i in range (0, num):
+	for i in range (num):
 		c = a + b
 		if c < num:
 			print c
 		a = b
 		b = c
 
-fibonacci(4200)
+fibonacci(70)
