@@ -1,14 +1,18 @@
+# Print fibo sequence up to but not including input num
+
 def fibonacci(num):
 
 	a, b = 0, 1
-	print a
-	print b
+	if a < num:
+		print a
+	if b < num:
+		print b
 
-	for i in range (1, num + 1):
+	for i in range (0, num):
 		c = a + b
-		print c
+		if c < num:
+			print c
 		a = b
 		b = c
-	#return c
 
-fibonacci(10)
+fibonacci(4200)
