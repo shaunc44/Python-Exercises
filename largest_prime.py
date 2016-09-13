@@ -16,4 +16,4 @@ def largest_prime (num):
 			return x, 'is the largest prime factor'
 
 #Call and print function
-print (largest_prime(94))
+print (largest_prime(99))

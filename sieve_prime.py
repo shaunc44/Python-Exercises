@@ -12,4 +12,4 @@ def sieve_prime(number):
 	return sieve_list
 
 
-print(sieve_prime(15))
+print(sieve_prime(20))
