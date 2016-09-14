@@ -1,9 +1,7 @@
-def string_replace(phrase):
+def string_replace(*phrase):
 
-	phrase_join = ",".join(phrase)
-	phrase_repl = phrase_join.replace("right", "left")
+	phrase = ",".join(phrase)
+	phrase = phrase.replace("right", "left")
+	return phrase
 
-	return phrase_repl
-
-
-print string_replace("left", "left")
+print string_replace("right now I would like to do the right thing!")
