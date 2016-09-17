@@ -17,15 +17,17 @@ def number_base(char, base):
 
 	#Need to check whether num exceeds bases, return -1
 
-	#return num
-
-	total = 0
-	i = 0
-	for z in num:
-		total += (z * (base ** i))
-		i += 1
-
-	return total
+	#this is correct **********************
+	if y in num > base - 1:
+		return -1
+	else:
+		#Convert chars to decimal
+		total = 0
+		i = 0
+		for z in num:
+			total += (z * (base ** i))
+			i += 1
+		return total
 
 
 print number_base('AF', 16)
