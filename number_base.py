@@ -5,7 +5,8 @@ def number_base(char, base):
 	#Reverse chars
 	char = char[::-1]
 
-	#Create empty list to insert converted chars
+	#Create empty list
+	#Convert chars > ints; append to list
 	num = list()
 	for x in char:
 		if x.isalpha():
@@ -15,19 +16,18 @@ def number_base(char, base):
 			n = int(x)
 			num.append(int(n))
 
-	#Need to check whether num exceeds bases, return -1
-
-	#this is correct **********************
-	if y in num > base - 1:
-		return -1
-	else:
+	#Check if num > base; then return -1
+	for y in num:
+		if y > base - 1:
+			return -1
 		#Convert chars to decimal
-		total = 0
-		i = 0
-		for z in num:
-			total += (z * (base ** i))
-			i += 1
-		return total
+		else:
+			total = 0
+			i = 0
+			for z in num:
+				total += (z * (base ** i))
+				i += 1
+			return total
 
 
 print number_base('AF', 16)
