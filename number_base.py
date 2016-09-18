@@ -27,7 +27,7 @@ def number_base(char, base):
 			for z in num:
 				total += (z * (base ** i))
 				i += 1
-			return total
+	return total
 
 
 print number_base('AF', 16)
