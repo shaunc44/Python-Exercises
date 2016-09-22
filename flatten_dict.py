@@ -1,17 +1,12 @@
 def flat_dict(dict):
 
-	print 'Regular Dict:', dict
-
-	for i in dict:
-		print dict.keys().values() 
-
-
-
+	for key, value in dict.items():
+		print "\"" + str(key) + "\"/\"" + str(value) + "\""
 
 
 dict = {'Name': 'Shaun',
-		'Age': 124,
-		'Kids': ('Igbert', 'Pumpkin')
+		'Age': 99,
+		'Kids': ('Scrunchy', 'Pumpkin')
 		}
 
-print flat_dict(dict)
+flat_dict(dict)
