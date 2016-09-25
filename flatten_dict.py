@@ -4,15 +4,16 @@ def flat_dict(dict):
 	#print key_list[0]
 	#print dict.get(1)[0]
 
-	#for i in range(len(dict.keys())):
-	for i in dict:
+	for i in range(len(dict.keys())):
+	#for i, j in dict.items():
 		#for j in range(len(dict.values())):
 		#print "\"" + dict.keys()[i] + "\"/\"" + dict.values()[i] + "\""
 		#if dict.values()[i]
-		print dict.get('Kids')[0]
+		print i
+		print dict.get(key_list[i], [1])
 
 #*** use this to print each value
-#dict.get('keyName')[0]
+#dict.get('Kids')[0]
 
 
 """
@@ -21,15 +22,6 @@ def flat_dict(dict):
 		for key, value[i] in dict.items():
 			print "\"" + str(key) + "\"/\"" + str(value) + "\""
 """
-
-"""
-	for key in dict.keys():
-		print key
-		for value in dict.values():
-			print value
-"""
-
-
 
 
 dict = {'Name': 'Shaun',
