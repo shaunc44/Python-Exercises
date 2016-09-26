@@ -1,8 +1,23 @@
 def flat_dict(person):
 
-	for key in person.values():
-		for value in key:
-			print value
+#for x, y in person.items():
+	for key in person.keys():
+		print key
+
+
+		""" This prints each value on separate lines
+		for key in person.values():
+			for value in key:
+				print value
+		"""
+
+person = {'Name': {'Shaun'},
+		'Age': {'97'},
+		'Kids': {'Scrunchy', 'Pumpkin'}
+		}
+
+flat_dict(person)
+
 
 """
 	for key, value in person.items():
@@ -31,10 +46,3 @@ def flat_dict(person):
 		for key, value[i] in dict.items():
 			print "\"" + str(key) + "\"/\"" + str(value) + "\""
 """
-
-person = {'Name': 'Shaun',
-		'Age': '97',
-		'Kids': ['Scrunchy', 'Pumpkin']
-		}
-
-flat_dict(person)
