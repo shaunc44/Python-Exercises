@@ -1,22 +1,41 @@
+"""
 def flat_dict(person):
 
-#for x, y in person.items():
+	stack = [((), person)]
+	result = {}
+	while stack:
+		path, current = stack.pop()
+		for k, v in current.items():
+			if isinstance(v, dict):
+				stack.append((path + (k,), v))
+			else:
+				result["/".join((path + (k,)))] = v
+	return result
+
+
+person = {'Name': {'Shaun'},
+		'Age': {97},
+		'Kids': {'Scrunchy', 'Pumpkin'}
+		}
+
+print flat_dict(person)
+"""
+
+nums = [3, 4, 6]
+stack = [((), nums)]
+print stack
+print stack.pop()
+
+"""
 	for key in person.keys():
 		print key
 
 
-		""" This prints each value on separate lines
-		for key in person.values():
-			for value in key:
-				print value
-		"""
-
-person = {'Name': {'Shaun'},
-		'Age': {'97'},
-		'Kids': {'Scrunchy', 'Pumpkin'}
-		}
-
-flat_dict(person)
+	#This prints each value on separate lines
+	for key in person.values():
+		for value in key:
+			print value
+"""
 
 
 """
