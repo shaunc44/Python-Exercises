@@ -1,22 +1,27 @@
 def safe_pawns(pawns):
 
-	print pawns
 	count = 0
-	pawns = pawns.items()
-	print pawns
+	#print pawns2[0][0]
 
 	for pawn in pawns:
-		print pawn(0)
-		location = list(pawn)
-		print list(location)
-		letter = location[0]
-		num = location[1]
-		letter_dec = ord(letter)
-		pawn1 = chr(letter_dec + 1)
-		pawn2 = chr(letter_dec - 1)
-		pawn1 = letter1 + str(num - 1)
-		pawn2 = letter2 + str(num + 1)
-		new_num = 2 - 1
+		#place target pawn coordinates in vars: col & num
+		#convert col(letter) to ascii value
+		col_pawn0 = ord(pawn[0])
+		num_pawn0 = int(pawn[1])
+		#print type(num_pawn0)
+		#print col_pawn0, num_pawn0
+		#Determine coords of required support pawns
+		col_pawn1 = chr(col_pawn0 - 1)
+		#print col_pawn1
+		col_pawn2 = chr(col_pawn0 + 1)
+		#print col_pawn2
+		num_pawn1 = (num_pawn0 - 1)
+		num_pawn2 = (num_pawn0 + 1)
+		#print num_pawn1, num_pawn2
+		#num_pawn2 = str(num_pawn0 + 1)
+		#print num_pawn2
+
+		#Now concat the 2 support pawns coords and compare to the target pawn.....
 
 
 """
