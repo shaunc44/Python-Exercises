@@ -18,11 +18,11 @@ def flat_dict(person):
 
 		#Iterate through key, value of current which is a dict
 		for k, v in current.items():
-			print '5:', k, v
+			print '5:', k
+			print '6:', v
 
 			#Checks that v is type dictionary and v exists
 			if isinstance(v, dict) and v:
-				print '6:', v
 				stack.append((path + (k,), v))
 				print '7:', stack
 			else:
@@ -33,11 +33,13 @@ def flat_dict(person):
 
 
 person = {
-			'Name': {
-				'First': 'Shaun',
-				'Last': 'C'
+			'Info': {
+				'Name': {
+					'First': 'Shaun',
+					'Last': 'McArthur',
+				},
+				'Age': '97'
 			},
-			'Age': '97',
 			'Kids': {
 				'Son': 'Scrunchy',
 				'Daughter': 'Pumpkin'
