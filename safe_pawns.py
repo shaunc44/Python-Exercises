@@ -15,13 +15,13 @@ def safe_pawns(pawns):
 		#print col_pawn1
 		col_pawn2 = chr(col_pawn0 + 1)
 		#print col_pawn2
-		num_pawn1 = (num_pawn0 - 1)
-		num_pawn2 = (num_pawn0 + 1)
+		num_pawn1 = num_pawn2 = str(num_pawn0 - 1)
 		#print num_pawn1, num_pawn2
 		#num_pawn2 = str(num_pawn0 + 1)
-		#print num_pawn2
+		print col_pawn1 + num_pawn1
+		print col_pawn2 + num_pawn2
 
-		#Now concat the 2 support pawns coords and compare to the target pawn.....
+		#Now concat the 2 support pawns coords and compare to the target pawn..
 
 
 """
