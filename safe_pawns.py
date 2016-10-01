@@ -18,10 +18,14 @@ def safe_pawns(pawns):
 		#Create better logic statement
 		#If pawn1 or pawn 2 matches any pawns from input ...
 		for i in pawns:
-			if ((pawn1 == i) or (pawn2 == i)):
+			if (pawn1 == i):
 				count += 1
 				print count
-	#print count
+				break
+			elif (pawn2 == i):
+				count += 1
+				print count
+	print count
 
 
 # Enter up to 8 pawns (coordinates) from a1 to h8
