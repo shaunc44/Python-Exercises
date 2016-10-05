@@ -1,11 +1,18 @@
-def minimum(*args):
-	return min(*args)
+def min(*args):
 
-def maximum(*args):
-	return max(*args)
+	#nums_list = map(list, args)
+	print args
+	for i in args:
+		print i
+
+	#return min(*args)
 
 
-nums = (3, 2, 8, 51, 9, 4, 1, 0, -3)
+#def max(*args):
+	#return max(*args)
 
-print 'Max:', maximum(nums)
-print 'Min:', minimum(nums)
+
+#nums = (3, 2, 8, 51, 9, 4, 1, 0, -3)
+
+print 'Min:', min(3, 2, 8, 51, 9, 4, 1, 0, -3)
+#print 'Max:', max(nums)
