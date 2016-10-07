@@ -22,7 +22,7 @@ def max(*args):
 	return high
 
 #print list('hello', 'shaun')
-
+#print max(2.2, 5.6, 5.9)
 
 print 'Min:', min(-3, 2, 51, 9, 4, 51, 0, -3)
 print 'Max:', max([1, 2, 0, 33, 4], 7)
