@@ -1,6 +1,7 @@
 #Create function to find min number
-def min(*args):
-	args = list(args)
+def min(*args, **kwargs):
+	print len(args)
+	#args = list(args)
 	low = args[0]
 	for i in args:
 		if i < low:
@@ -9,7 +10,8 @@ def min(*args):
 
 
 #Create function to find max number
-def max(*args):
+def max(*args, **kwargs ):
+	print len(args)
 	#args = list(args)
 	#print type(args)
 	#args.split()
@@ -22,7 +24,14 @@ def max(*args):
 	return high
 
 #print list('hello', 'shaun')
-#print max(2.2, 5.6, 5.9)
+
 
 print 'Min:', min(-3, 2, 51, 9, 4, 51, 0, -3)
-print 'Max:', max([1, 2, 0, 33, 4], 7)
+print 'Max:', max([1, 2, 0, 33, 4], 78)
+
+'''
+print max('hello')
+print max([9, 10, 77], [2, 4], [7, 2])
+print max([2, 3, 0])
+print max(2.2, 5.6, 5.9)
+'''
