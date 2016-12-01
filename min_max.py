@@ -1,5 +1,5 @@
 #Create function to find min number
-def min(*args, **kwargs):
+def min(*args, **kwargs, key=None):
 	print len(args)
 	#args = list(args)
 	low = args[0]
@@ -10,7 +10,7 @@ def min(*args, **kwargs):
 
 
 #Create function to find max number
-def max(*args, **kwargs ):
+def max(*args, **kwargs, key=None):
 	print len(args)
 	#args = list(args)
 	#print type(args)
