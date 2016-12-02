@@ -1,23 +1,21 @@
+from time import sleep
+
 # Greeter is a terminal application that greets old friends warmly,
 # and remembers new friends.
 
-'''
 # Display a title bar.
 print("\t**********************************************")
 print("\t***  Greeter - Hello old and new friends!  ***")
 print("\t**********************************************")
 
-# Display a bunch of output, representing a long-running program.
-for x in range(0,51):
-	print("\nWe have done %d fun and interesting things together!" % x)
-'''
+# Print a bunch of information, in short intervals
+names = ['aaron', 'brenda', 'cyrene', 'david', 'eric']
 
-# Import the sleep function.
-from time import sleep
+# Print each name 5 times
+for name in names:
+	# Pause for 1 second bw batches and then skip two lines
+	sleep(1)
+	print("\n\n")
 
-print("I'm going to sleep now.")
-
-# Sleep for 3 seconds.
-sleep(3)
-
-print("I woke up!")
+	for x in range(0,5):
+		print (name.title())
