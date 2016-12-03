@@ -4,6 +4,9 @@ import os
 # Greeter is a terminal application that greets old friends warmly,
 # and remembers new friends.
 
+
+#### FUNCTIONS ####
+
 def display_title_bar():
 	# Clear the screen before listing names
 	os.system('clear')
@@ -13,16 +16,26 @@ def display_title_bar():
 	print("\t**********************************************")
 
 
-# Print a bunch of information, in short intervals
-names = ['aaron', 'brenda', 'cyrene', 'david', 'eric']
+#### MAIN PROGRAM ####
 
-# Print each name 5 times
-for name in names:
+# Set up a loop where users can choose what they'd like to do.
+choice = ''
+while choice != 'q':
 	display_title_bar()
-	print("\n\n")
 
-	for x in range(0,5):
-		print (name.title())
+	# Let users know what they can do.
+	print("\n[1] See a list of friends.")
+	print("[2] Tell me about someone new.")
+	print("[q] Quit.\n")
 
-	# Pause for 1 second bw batches
-	sleep(1)
+	choice = input("What would you like to do? ")
+
+	# Respond to the user's choice.
+	if choice == '1':
+		print("\nHere are the people I know.\n")
+	elif choice == '2':
+		print("\nI can't wait to meet this person!\n")
+	elif choice == 'q':
+		print("\nThanks for playing. Bye.")
+	else:
+		print("\nI didn't understand that choice.\n")
