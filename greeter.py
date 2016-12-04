@@ -22,14 +22,26 @@ def get_user_choice():
 
 	return input("What would you like to do? ")
 
+def show_names():
+	# Shows names of everyone already in the list
+	print("\nHere are the people I know.\n")
+	for name in names:
+		print(name.title())
+
+def get_new_name():
+	# Ask user for new name and stores name
+	new_name = input("\nPlease tell me this person's name: ")
+	names.append(new_name)
+	print("\nI'm so happy to know %s!\n" % new_name.title())
+
 
 #### MAIN PROGRAM ####
 
 # Set up a loop where users can choose what they'd like to do.
 name = []
-
 choice = ''
 display_title_bar()
+
 while choice != 'q':
 
 	choice = get_user_choice()
@@ -37,13 +49,7 @@ while choice != 'q':
 	# Respond to the user's choice.
 	display_title_bar()
 	if choice == '1':
-		print("\nHere are the people I know.\n")
-		for name in names:
-			print(name.title())
 	elif choice == '2':
-		new_name = input("\nPlease tell me this preson's name: ")
-		names.append(new_name)
-		print("\nI'm so happy to know %s!\n" % new_name.title())
 	elif choice == 'q':
 		print("\nThanks for playing. Bye.")
 	else:
