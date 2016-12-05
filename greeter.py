@@ -19,7 +19,7 @@ def get_user_choice():
 	print("\n[1] See a list of friends.")
 	print("[2] Tell me about someone new.")
 	print("[q] Quit.")
-	return input("What would you like to do? ")
+	return raw_input("What would you like to do? ")
 
 def show_names():
 	# Shows the names of everyone who is already in the list.
@@ -30,7 +30,7 @@ def show_names():
 def get_new_name():
 	# Asks the user for a new name, and stores the name 
 	# if we don't already know about this person.
-	new_name = input("\nPlease tell me this person's name: ")
+	new_name = raw_input("\nPlease tell me this person's name: ")
 	if new_name in names:
 		print("\n%s is an old friend! Thanks, though." % new_name.title())
 	else:
@@ -55,16 +55,16 @@ def quit():
 		file_object = open('names.pydata', 'wb')
 		pickle.dump(names, file_object)
 		file_object.close()
-		print("\nThanks for playing. I will remember these good friends.")
+		print("\nThanks for playing. I will remember these good friends.\n")
 	except Exception as e:
-		print("\nThanks for playing. I won't be able to remember these names.")
+		print("\nThanks for playing. I won't be able to remember these names.\n")
 		print(e)
 
 
 #### MAIN PROGRAM ####
 
 # Set up a loop where users can choose what they'd like to do.
-names = []
+names = load_names()
 
 choice = ''
 display_title_bar()
@@ -74,12 +74,13 @@ while choice != 'q':
 
 	# Respond to the user's choice.
 	display_title_bar()
-	if choice == 1:
+	if choice == '1':
 		show_names()
-	elif choice == 2:
+	elif choice == '2':
 		get_new_name()
-	elif choice == q:
-		print("\nThanks for playing. Bye.")
+	elif choice == 'q':
+		quit()
+		#print("\nThanks for playing. Bye.\n")
 	else:
 		print("\nI didn't understand that choice.\n")
 
