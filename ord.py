@@ -1,3 +1,5 @@
+#ORD() FUNCTION
+
 #ord() helps you find the ASCII value of a character
 #American Standard Code for Information Interchange
 
@@ -10,3 +12,6 @@ print (letter)
 
 # for i in string:
 # 	print ( ord(i) )
+
+
+print (chr(letter))
