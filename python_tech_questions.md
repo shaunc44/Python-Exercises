@@ -170,10 +170,119 @@ while True:
 ```
 Answer: SyntaxError, there shouldn’t be a space between + and = in +=  
 
-### 22. 
+### 22. What is the output of the following?  
+```python
+i = 1
+while True:
+    if i%0O7 == 0:
+        break
+    print(i)
+    i += 1
+```
+Answer: 1 2 3 4 5 6, control exits when i = 7;  
+python apparently converts O to 0 and ignores leading zeroes;  
+007 is an octal number which are base 8 numbers  
+
+### 23. What is the output of the following?  
+```python
+i = 5
+while True:
+    if i%0O11 == 0:
+        break
+    print(i)
+    i += 1
+```
+Answer: 5 6 7 8  
+Explanation: 0O11 is an octal number which equals 1*(8**1) + 1*(8**0) = 9  
+Therefore the numbers print until i = 9  
+
+### 24. What is the output of the following?  
+```python
+i = 5
+while True:
+    if i%0O9 == 0:
+        break
+    print(i)
+    i += 1
+```
+Answer: Error
+Explanation: 9 isn’t allowed in an octal number, only 0 - 8.  
+
+### 25. What is the output of the following?  
+```python
+i = 1
+while True:
+    if i%2 == 0:
+        break
+    print(i)
+    i += 2
+```
+Answer: 1 3 5 7 9 11 ...
+Explanation: The loop does not terminate since i is never an even number.  
+
+### 26. What is the output of the following?  
+```python
+i = 1
+while False:
+    if i%2 == 0:
+        break
+    print(i)
+    i += 2
+```
+Answer: None  
+Explanation: Control does not enter the loop because of False
+
+### 27. What is the output of the following?  
+```python
+True = False
+while True:
+    print(True)
+    break
+```
+Answer: SyntaxError, True is a keyword and it’s value cannot be changed.  
+
+### 28. The output of executing string.ascii_letters can also be achieved by:  
+Answer: string.ascii_lowercase+string.ascii_upercase  
+
+### 29. What is the output when the following code is executed ?  
+```python
+    >>> str1 = 'hello'
+    >>> str2 = ','
+    >>> str3 = 'world'
+    >>> str1[-1:]
+```
+Answer: 0  
+Explanation: -1 corresponds to the last index.  
+
+### 30. What is the output when the following statement is executed?  
+```python
+    >>>print 'new' 'line'
+```
+Answer: newline  
+Explanation: String literals seperated by white space are allowed. They are concatenated.  
 
 
+### 31. What is the output when the following statement is executed ?  
+```python
+print '\x97\x98'
+```
+Answer: _~  
+Explanation: \x is an escape sequence that means the following 2 digits are  
+a hexadicmal number encoding a character.  
 
+### 32. What is the output when following code is executed ?  
+```python
+str1="helloworld"
+str1[::-1]
+```
+Answer: dlrowolleh  
+
+### 33. print 0xA + 0xB + 0xC:  
+Answer: 33  
+Explanation:0xA and 0xB and 0xC are hexadecimal integer literals  
+representing the decimal values 10,11 and 12 respectively. There sum is 33.  
+*0x followed by number; means HEX number*  
+*\x followed by number; means HEX ascii character*  
 
 
 
