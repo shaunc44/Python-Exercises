@@ -21,7 +21,7 @@ d) pass
 Answer: A, eval can be used as a variable
 
 ***
-## REGEX
+# REGEX
 
 ### 5. Which of the following creates a pattern object?  
 a) re.create(str)  
@@ -69,7 +69,7 @@ print(matched.group(2))
 Answer: ‘humans’, returns 2nd index of the group  
 
 ***
-## NUMERIC TYPES
+# NUMERIC TYPES
 
 ### 11. What is the output of print 0.1 + 0.2 == 0.3?  
 Answer: False
@@ -147,7 +147,7 @@ Explanation: ^ is the Binary XOR operator.
 *^ (XOR) copies the bit if it is in one operand, but not both*  
 
 ***
-## FOR & WHILE LOOPS
+# FOR & WHILE LOOPS
 
 ### 19. What is the output of the following?  
 ```python
@@ -251,7 +251,7 @@ while True:
 Answer: SyntaxError, True is a keyword and it’s value cannot be changed.  
 
 ***
-## STRINGS
+# STRINGS
 
 ### 28. The output of executing string.ascii_letters can also be achieved by:  
 Answer: string.ascii_lowercase+string.ascii_upercase  
@@ -297,7 +297,7 @@ representing the decimal values 10,11 and 12 respectively. There sum is 33.
 *\x followed by number; means HEX ascii character*  
 
 ***
-## LISTS
+# LISTS
 
 ### 34. What is the output when we execute list(“hello”)?  
 Answer: [‘h’, ‘e’, ‘l’, ‘l’, ‘o’]  
@@ -314,17 +314,91 @@ d) random.shuffleList(list1)
 ```
 Answer:c, shuffle list1 in places, then return list1  
 
-### 36.   
+***
+# DICTIONARIES
 
+### 36. What will be the output?  
+```python
+d = {"john":40, "peter":45}
+"john" in d
+```
+Answer: True  
+*Explanation: 'in' can be used to check if the __key__ is int dictionary.*  
 
+***
+# TUPLES
 
+### 37. What will be the output? 
+```python
+t1 = (1, 2, 4, 3)
+t2 = (1, 2, 3, 4)
+t1 < t2
+```
+Answer: False  
+*Explanation: Elements are compared one by one in this case.*  
 
+### 38. What will be the output?  
+```python
+my_tuple = (1, 2, 3, 4)
+my_tuple.append( (5, 6, 7) )
+print len(my_tuple)
+```
+Answer: Error  
+*Explanation: Tuples are immutable and don’t have an append method. An exception is thrown in this case*  
 
+### 39. What will be the output?  
+```python
+numberGames = {}
+numberGames[(1,2,4)] = 8
+numberGames[(4,2,1)] = 10
+numberGames[(1,2)] = 12
 
+sum = 0
+for k in numberGames:
+    sum += numberGames[k]
 
+print len(numberGames) + sum
+```
+Answer: 3 + 30 = 33  
+*Explanation: Tuples can be used for keys into dictionaries. Tuples can have mixed lengths  
+and the order of the items in the tuple is considered when comparing the equality of the keys*  
 
+***
+# FILES
 
+### 40. To open a file c:\scores.txt for reading, we use:  
+```python
+infile = open(“c:\\scores.txt”, “r”)
+```
 
+### 41. Which of the following statements are true? (multiple answers allowed)  
+```
+When you open a file for reading, if the file does not exist, an error occurs.
+When you open a file for writing, if the file does not exist, a new file is created.
+When you open a file for writing, if the file exists, the existing file is overwritten with the new file.
+```
+All statements are true  
+
+### 42. To read the entire remaining contents of the file as a string from a file object infile, we use:  
+`infile.read()`  
+*Explanation: read function is used to read all the lines in a file.*  
+
+### 43. What is the output?  
+```python
+f = None
+
+for i in range (5):
+    with open("data.txt", "w") as f:
+        if i > 2:
+            break
+
+print f.closed
+```
+Answer: True  
+*Explanation: The WITH statement when used with open file guarantees that  
+the file object is closed when the with block exits*  
+
+### 44. 
 
 
 
