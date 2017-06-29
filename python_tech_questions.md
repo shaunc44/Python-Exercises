@@ -20,6 +20,10 @@ d) pass
 ```
 Answer: A, eval can be used as a variable
 
+***
+## REGEX
+***
+
 ### 5. Which of the following creates a pattern object?  
 a) re.create(str)  
 b) re.regex(str)  
@@ -64,6 +68,10 @@ matched = re.match(r'(.*) (.*?) (.*)', sentence)
 print(matched.group(2))
 ```
 Answer: ‘humans’, returns 2nd index of the group  
+
+***
+## NUMERIC TYPES
+***
 
 ### 11. What is the output of print 0.1 + 0.2 == 0.3?  
 Answer: False
@@ -139,6 +147,10 @@ d) 7
 Answer: d  
 Explanation: ^ is the Binary XOR operator.  
 *^ (XOR) copies the bit if it is in one operand, but not both*  
+
+***
+## FOR & WHILE LOOPS
+***
 
 ### 19. What is the output of the following?  
 ```python
@@ -241,6 +253,10 @@ while True:
 ```
 Answer: SyntaxError, True is a keyword and it’s value cannot be changed.  
 
+***
+## STRINGS
+***
+
 ### 28. The output of executing string.ascii_letters can also be achieved by:  
 Answer: string.ascii_lowercase+string.ascii_upercase  
 
@@ -284,11 +300,17 @@ representing the decimal values 10,11 and 12 respectively. There sum is 33.
 *0x followed by number; means HEX number*  
 *\x followed by number; means HEX ascii character*  
 
+***
+## LISTS
+***
 
+### 34. What is the output when we execute list(“hello”)?  
+Answer: [‘h’, ‘e’, ‘l’, ‘l’, ‘o’]  
 
+### 35. Suppose list1 is [1, 5, 9], what is sum(list1) ?  
+Answer: 15  
 
-
-
+### 35.   
 
 
 
