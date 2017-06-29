@@ -398,7 +398,166 @@ Answer: True
 *Explanation: The WITH statement when used with open file guarantees that  
 the file object is closed when the with block exits*  
 
-### 44. 
+***
+# FUNCTIONS
+
+### 44. What is the output of the below program?  
+```python
+x = 50
+
+def func():
+    global x
+    print('x is', x)
+    x = 2
+    print('Changed global x to', x)
+
+func()
+print('Value of x is', x)
+```
+Answer:  
+```
+x is 50
+Changed global x to 2
+Value of x is 2
+```
+*Explanation: The global statement is used to declare that x is a global variable – hence, when we assign a  value to x inside the function, that change is reflected when we use the value of x in the main block*  
+
+### 45. Which of the following is a features of DocString?  
+```
+a) Provide a convenient way of associating documentation with Python modules, functions, classes, and methods
+b) All functions should have a docstring
+c) Docstrings can be accessed by the __doc__ attribute on objects
+d) All of the mentioned
+```
+Answer: d  
+*Explanation: Python has a nifty feature called documentation strings, usually referred to by its shorter  name docstrings. DocStrings are an important tool that you should make use of since it helps to document  the program better and makes it easier to understand*  
+
+***
+# EXCEPTION HANDLING
+
+### 46. How many except statements can a try-except block have?  
+Answer: more than zero  
+*Explanation: There has to be at least one except statement*  
+
+### 47. Is the following code valid?  
+```python
+try:
+    # Do something
+except:
+    # Do something
+finally:
+    # Do something
+```
+Answer: finally cannot be used with except  
+
+### 48. When is the finally block executed?  
+Answer: The finally block is always executed.  
+
+### 49. What is the output of the following code?  
+```python
+def foo():
+    try:
+        return 1
+    finally:
+        return 2
+k = foo()
+print(k)
+```
+Answer: 2  
+*Explanation: The finally block is executed even if there is a return statement in the try block*  
+*Only one thing can be returned from a function, unless packed*
+
+### 50. What happens when ‘1’ == 1 is executed?  
+Answer: False  
+*Explanation: It simply evaluates to False and does not raise any exception*  
+
+***
+# ARGUMENT PASSING 1
+
+### 51. What is the type of each element in sys.argv?
+Answer: String  
+*Explanation: It is a list of strings*  
+
+### 52. What is the length of sys.argv?  
+Answer: number of arguments + 1
+*Explanation: The first argument is the name of the program itself.  
+Therefore the length of sys.argv is one more than the number arguments*  
+
+### 53. What is the output of the following code?  
+```python
+def foo(k):
+    k[0] = 1
+q = [0]
+foo(q)
+print(q)
+```
+Answer: 1
+*Explanation: Lists are passed by reference*
+
+### 54. How are keyword arguments specified in the function heading?
+`two stars followed by a valid identifier`  
+
+### 55. What is the output of the following code?  
+```python
+def foo():
+    return total + 1
+total = 0
+print(foo())
+```
+Answer: 1  
+*Explanation: It is possible to read the value of a global variable directly*
+
+### 56. What is the output of the following code?  
+```python
+def foo(x):
+    x = ['def', 'abc']
+    return id(x)
+q = ['abc', 'def']
+print(id(q) == foo(q))
+```
+Answer: False  
+*Explanation: A new object is created in the function*  
+
+### 57. What is the output of the following code?  
+```python
+def foo(i, x=[]):
+    x.append(i)
+    return x
+for i in range(3):
+    print(foo(i))
+```
+Answer: [0] [0, 1] [0, 1, 2]  
+*Explanation: When a list is a default value, the same list will be reused*  
+
+### 58. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
