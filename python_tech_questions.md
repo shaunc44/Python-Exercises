@@ -202,7 +202,7 @@ while True:
     i += 1
 ```
 Answer: 5 6 7 8  
-Explanation: 0O11 is an octal number which equals 1*(8**1) + 1*(8**0) = 9  
+Explanation: 0o11 is an octal number which equals 1*(8**1) + 1*(8**0) = 9  
 Therefore the numbers print until i = 9  
 
 ### 24. What is the output of the following?  
@@ -529,12 +529,68 @@ for i in range(3):
 Answer: [0] [0, 1] [0, 1, 2]  
 *Explanation: When a list is a default value, the same list will be reused*  
 
-### 58. 
+### 58. What is the output of print(k) in the following?  
+```python
+k = [print(i) for i in my_string if i not in "aeiou"]
+print(k)
+```
+Answer: list of Nones  
 
+***
+# MAPPING FUNCTIONS
 
+### 59. What is the output of the following?  
+```python
+x = ['ab', 'cd']
+print(list(map(upper, x)))
+```
+Answer: Error  
+*Explanation: A NameError occurs because upper is a class method*  
 
+### 60. What is the output of the following?  
+```python
+x = ['ab', 'cd']
+print(len(map(list, x)))
+```
+Answer: A TypeError occurs as map has no len().  
 
+***
+# STRINGS
 
+### 61. What is the output of the following code?  
+```python
+class father:
+    def __init__(self, param):
+        self.o1 = param
+
+class child(father):
+    def __init__(self, param):
+        self.o2 = param
+
+obj = child(22)
+print "%d %d" % (obj.o1, obj.o2)
+```
+Answer: Error  
+*Explanation: self.o1 was never created*  
+
+### 62. What is the output of the following code?  
+```python
+example = "snow world"
+example[3] = 's'
+print example
+```
+Answer: Error  
+*Explanation:Strings cannot be modified*  
+
+### 63. What is the output of the following code ?
+```python
+example="helloworld"
+example[::-1].startswith("d")
+```
+Answer: True  
+*Explanation: Starts with checks if the given string starts with the parameter that is passed*  
+
+### 64. 
 
 
 
