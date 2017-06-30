@@ -590,13 +590,70 @@ example[::-1].startswith("d")
 Answer: True  
 *Explanation: Starts with checks if the given string starts with the parameter that is passed*  
 
-### 64. 
+### 64. What is the output of the following code?  
+```python
+class Count:
+    def __init__(self, count = 0):
+       self.__count = count
 
+c1 = Count(2)
+c2 = Count(2)
+print(id(c1) == id(c2), end = " ")
 
+s1 = "Good"
+s2 = "Good"
+print(id(s1) == id(s2))
+```
+Answer: False True
+*Explanation: Execute in the shell objects cannot have same id, however in the case of strings its different*
 
+### 65.  What is the output of the following code?  
+```python
+class Name:
+    def __init__(self, firstName, mi, lastName):
+        self.firstName = firstName
+        self.mi = mi
+        self.lastName = lastName
 
+firstName = "John"
+name = Name(firstName, 'F', "Smith")
+firstName = "Peter"
+name.lastName = "Pan"
+print(name.firstName, name.lastName)
+```
+Answer: John Pan  
 
+### 66. Suppose x is 345.3546, what is format(x, “10.3f”) (_ indicates space)  
+`Answer: ___345.355`
+*Explanation: 10.3 indicates 10 digit spaces, including 3 decimal places*  
 
+### 67. What is the output when following code is executed ?  
+```python
+names1 = ['Amir', 'Bear', 'Charlton', 'Daman']
+names2 = names1
+names3 = names1[:]
+
+names2[0] = 'Alice'
+names3[1] = 'Bob'
+
+sum = 0
+
+for ls in (names1, names2, names3):
+    if ls[0] == 'Alice':
+        sum += 1
+    if ls[1] == 'Bob':
+        sum += 10
+print sum
+```
+Answer: 12  
+*Explanation: When assigning names1 to names2, we create a second reference to the same list.  
+Changes to names2 affect names1. When assigning the slice of all elements in names1 to names3,  
+we are creating a full  copy of names1 which can be modified independently*  
+
+### 68. Suppose list1 is [1, 3, 2], What is list1 * 2?
+`[1, 3, 2, 1, 3, 2]`
+
+### 69. 
 
 
 
