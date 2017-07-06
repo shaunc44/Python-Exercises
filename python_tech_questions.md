@@ -653,7 +653,17 @@ we are creating a full  copy of names1 which can be modified independently*
 ### 68. Suppose list1 is [1, 3, 2], What is list1 * 2?
 `[1, 3, 2, 1, 3, 2]`
 
-### 69. 
+### 69. What is the output of the following?  
+```python
+x = 'abcd'
+for i in x:
+    print(i)
+    x.upper()
+```
+Answer: a b c d  
+*Explanation: Changes do not happen in-place, rather a new instance of the string is returned*  
+
+### 70. 
 
 
 
